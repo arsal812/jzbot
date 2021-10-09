@@ -30,7 +30,7 @@ const request = require('request');
 const { spawn, exec, execSync } = require("child_process")
 const fs = require("fs")
 const axios = require("axios")
-const ffmpeg = require('fluent-ffmpeg')
+const ffmpeg = require("fluent-ffmpeg")
 const { EmojiAPI } = require("emoji-api");
 const tik = require('tiktok-scraper-without-watermark')
 const ig = require('insta-fetcher')
@@ -689,9 +689,11 @@ const responsebutton = (type == 'listResponseMessage') ? mek.message.listRespons
 if (responsebutton) {
 
 if (responsebutton == 'Welcome ON') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
 if (!isGroupAdmins && !mek.key.fromMe) { return reply(mess.only.admin) };
-if (!isBotGroupAdmins) { return reply(mess.only.bota) };
+if (!isBotGroupAdmins) {
+ return reply(mess.only.bota) };
 if (isWelkom) { return reply(`ᴡᴇʟᴄᴏᴍᴇ ɪs ᴀᴄᴛɪᴠᴇ`)};
 welkom.push(from)
 fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
@@ -700,9 +702,11 @@ reply(`ᴡᴇʟᴄᴏᴍᴇ ᴀᴄᴛɪᴠᴀᴛᴇᴅ`)
 
 if (responsebutton) {
 if (responsebutton == 'Welcome OFF') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
 if (!isGroupAdmins && !mek.key.fromMe) { return reply(mess.only.admin) };
-if (!isBotGroupAdmins) { return reply(mess.only.bota) };
+if (!isBotGroupAdmins) {
+ return reply(mess.only.bota) };
 if (!isWelkom) { return reply(`ᴡᴇʟᴄᴏᴍᴇ ɪs ᴅᴇᴀᴄᴛɪᴠᴇ`)};
 let wlkme = welkom.indexOf(from)
 welkom.splice(wlkme, 1)
@@ -712,9 +716,11 @@ reply(`sᴜᴄᴄᴇssғᴜʟʟʏ ᴅɪsᴀʙʟᴇᴅ ᴛʜᴇ ғᴇᴀᴛᴜʀ�
 
 if (responsebutton) {
 if (responsebutton == 'Event ON') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
 if (!isGroupAdmins && !mek.key.fromMe) { return reply(mess.only.admin) };
-if (!isBotGroupAdmins) { return reply(mess.only.bota) };
+if (!isBotGroupAdmins) {
+ return reply(mess.only.bota) };
 if (isEvent) { return reply(`ᴇᴠᴇɴᴛ ɪs ᴀᴄᴛɪᴠᴇ`)};
 event.push(from)
 fs.writeFileSync('./src/event.json', JSON.stringify(event))
@@ -723,9 +729,11 @@ reply(`ᴇᴠᴇɴᴛ ᴀᴄᴛɪᴠᴀᴛᴇᴅ`)
 
 if (responsebutton) {
 if (responsebutton == 'Event OFF') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
 if (!isGroupAdmins && !mek.key.fromMe) { return reply(mess.only.admin) };
-if (!isBotGroupAdmins) { return reply(mess.only.bota) };
+if (!isBotGroupAdmins) {
+ return reply(mess.only.bota) };
 if (!isEvent) { return reply(`ᴇᴠᴇɴᴛ ɪs ᴅᴇᴀᴄᴛɪᴠᴇ`)};
 let evntm = event.indexOf(from)
 event.splice(evntm, 1)
@@ -735,7 +743,8 @@ reply(`sᴜᴄᴄᴇssғᴜʟʟʏ ᴅɪsᴀʙʟᴇᴅ ᴛʜᴇ ғᴇᴀᴛᴜʀ�
 
 if (responsebutton) {
 if (responsebutton == 'Antivirus ON') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
     if (!isOwner && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ᴏᴡɴᴇʀ`)};
     if (!isBotGroupAdmins) { return reply('ʙᴏᴛ sʜᴏᴜʟᴅ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴘʀᴏᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ')};
 	if (isAntiVirus) { return reply(`ᴀɴᴛɪʟɪɴᴋ ɪs ᴀᴄᴛɪᴠᴇ`)};
@@ -746,7 +755,8 @@ if (!isGroup) { return reply(mess.only.group)};
 
 if (responsebutton) {
 if (responsebutton == 'Antivirus OFF') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
 if (!isGroupAdmins && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs`)};
  if (!isBotGroupAdmins) { return reply('ʙᴏᴛ sʜᴏᴜʟᴅ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴘʀᴏᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ')};
  if (!isAntiLinkVirus) { return reply(`ᴀɴᴛɪʟɪɴᴋ ɪs ᴅᴇᴀᴄᴛɪᴠᴇ`)};
@@ -758,7 +768,8 @@ if (!isGroupAdmins && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ɢʀᴏ
 
 if (responsebutton) {
 if (responsebutton == 'Antilink ON') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
     if (!isOwner && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ᴏᴡɴᴇʀ`)};
     if (!isBotGroupAdmins) { return reply('ʙᴏᴛ sʜᴏᴜʟᴅ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴘʀᴏᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ')};
 	if (isAntiLink) { return reply(`ᴀɴᴛɪʟɪɴᴋ ɪs ᴀᴄᴛɪᴠᴇ`)};
@@ -769,7 +780,8 @@ if (!isGroup) { return reply(mess.only.group)};
 
 if (responsebutton) {
 if (responsebutton == 'Antilink OFF') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
 if (!isGroupAdmins && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs`)};
  if (!isBotGroupAdmins) { return reply('ʙᴏᴛ sʜᴏᴜʟᴅ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴘʀᴏᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ')};
  if (!isAntiLink) { return reply(`ᴀɴᴛɪʟɪɴᴋ ɪs ᴅᴇᴀᴄᴛɪᴠᴇ`)};
@@ -781,7 +793,8 @@ if (!isGroupAdmins && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ɢʀᴏ
 
 if (responsebutton) {
 if (responsebutton == 'Antilinkyt ON') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
     if (!isOwner && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ᴏᴡɴᴇʀ`)};
     if (!isBotGroupAdmins) { return reply('ʙᴏᴛ sʜᴏᴜʟᴅ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴘʀᴏᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ')};
 	if (isAntiLinkyt) { return reply(`ᴀɴᴛɪʟɪɴᴋ ɪs ᴀᴄᴛɪᴠᴇ`)};
@@ -792,7 +805,8 @@ if (!isGroup) { return reply(mess.only.group)};
 
 if (responsebutton) {
 if (responsebutton == 'Antilinkyt OFF') {
-if (!isGroup) { return reply(mess.only.group)};
+if (!isGroup) { return reply(mess.only.group)
+};
 if (!isGroupAdmins && !mek.key.fromMe) { return reply(`ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs`)};
  if (!isBotGroupAdmins) { return reply('ʙᴏᴛ sʜᴏᴜʟᴅ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴘʀᴏᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ')};
  if (!isAntiLinkyt) { return reply(`ᴀɴᴛɪʟɪɴᴋ ɪs ᴅᴇᴀᴄᴛɪᴠᴇ`)};
@@ -1044,7 +1058,9 @@ if (responsebutton == 'Sourcecode') {
 
 if (responsebutton) {
 if (responsebutton == 'Slot') {
-const sotoy = ['🍊 : 🍒 : 🍐','🍊 : 🍊 : 🍊','🍒 : 🍇 : 🍊','🍇 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
+const sotoy = ['🍊 : 🍒 : 🍐','🍊 : 🍊 : 🍊','🍒 : 🍇 : 🍊','🍇 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋',
+'🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒',
+'🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
                 somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
                 somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
                 somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -2066,7 +2082,9 @@ break
 		            break
 		            
 		        case  'slot':
-                const sotoy = ['🍊 : 🍒 : 🍐','🍊 : 🍊 : 🍊','🍒 : 🍇 : 🍊','🍇 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
+                const sotoy = ['🍊 : 🍒 : 🍐','🍊 : 🍊 : 🍊','🍒 : 🍇 : 🍊','🍇 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋',
+'🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒',
+'🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
                 somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
                 somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
                 somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
